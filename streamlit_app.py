@@ -27,7 +27,7 @@ streamlit.dataframe(fruits_to_show)
 
 
 def get_fruitvice_data(this_fruit_choice):
-  fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)  
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)  
 
     # format json resp to tabulat form
     fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
